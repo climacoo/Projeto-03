@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline">Meu painel</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link align-middle px-0">
+                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Painel</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Ordens</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                                <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Produtos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Clientes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Relatórios</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="col">
+                <nav class="navbar navbar-expand navbar-light bg-light">
+                    <div class="container-fluid">
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                            <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
+                        </form>
+                    </div>
+                </nav>
+
+                <body>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Clientes</h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">345 mil</h6>
+                                        <p class="card-text">Janeiro/2023-Junho/2023,Brasília-Df</p>
+                                        <a href="#" class="card-link">Link do card 1</a>
+                                        <a href="#" class="card-link">Outro link</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Receita</h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">R$ 2,4 Milhões</h6>
+                                        <p class="card-text">Janeiro/2023-Junho/2023,Brasília-Df</p>
+                                        <a href="#" class="card-link">Link do card 2</a>
+                                        <a href="#" class="card-link">Outro link</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tráfego</h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">64 mil</h6>
+                                        <p class="card-text">Janeiro/2023-Junho/2023,Brasília-Df</p>
+                                        <a href="#" class="card-link">Link do card 3</a>
+                                        <a href="#" class="card-link">Outro link</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Compras</h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">42 unidades</h6>
+                                        <p class="card-text">Janeiro/2023-Junho/2023,Brasília-Df</p>
+                                        <a href="#" class="card-link">Link do card 4</a>
+                                        <a href="#" class="card-link">Outro link</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header bg-light font-weight-bold">
+                                        Gráfico últimos 6 meses
+                                    </div>
+                                    <div class="card-body">
+                                        <canvas id="graficoLinha" width="100%"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header bg-light font-weight-bold">
+                                        Últimas transações
+                                    </div>
+                                    <div class="card-body">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Ordem</th>
+                                                    <th>Produto</th>
+                                                    <th>Cliente</th>
+                                                    <th>Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>775199</td>
+                                                    <td>Produto 03</td>
+                                                    <td>jhondoe@example.com</td>
+                                                    <td>R$ 61,69</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>775499</td>
+                                                    <td>Produto 04</td>
+                                                    <td>jhondoe@example.com</td>
+                                                    <td>R$ 61,69</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>775931</td>
+                                                    <td>Produto 03</td>
+                                                    <td>jhondoe@example.com</td>
+                                                    <td>R$ 61,69</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>775947</td>
+                                                    <td>Produto 03</td>
+                                                    <td>jhondoe@example.com</td>
+                                                    <td>R$ 61,69</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>775968</td>
+                                                    <td>Produto 04</td>
+                                                    <td>jhondoe@example.com</td>
+                                                    <td>R$ 61,69</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <script>
+                        var ctx = document.getElementById("graficoLinha");
+                        var graficoLinha = new Chart(ctx, {
+                            type: 'line',
+                            data: {
+                                labels: ["Jan/2023", "Fev/2023", "Mar/2023", "Abr/2023", "Mai/2023", "Jun/2023"],
+                                datasets: [{
+                                    label: 'Votos',
+                                    data: [12, 21, 3, 5, 12, 21],
+                                    borderWidth: 1,
+                                    borderColor: 'rgba(54, 162, 235, 1)',
+                                }],
+                            },
+                            options: {
+                                scales: {
+                                    yAxes: [{
+                                        ticks: {
+                                            beginAtZero: true,
+                                        },
+                                    }],
+                                },
+                            },
+                        });
+                    </script>
+                </body>
+                
+                </html>
